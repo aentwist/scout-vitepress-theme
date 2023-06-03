@@ -1,13 +1,14 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
+import type { Theme } from "vitepress";
+import DefaultTheme from "vitepress/theme";
+import Layout from "./Layout.vue";
 import vuetify from "./plugins/vuetify";
 
 import "./assets/main.css";
 
-const app = createApp(App);
-
-app.use(router);
-app.use(vuetify);
-
-app.mount("#app");
+export default <Theme>{
+  Layout,
+  enhanceApp({ app }) {
+    app.use(vuetify);
+  },
+  extends: DefaultTheme,
+};

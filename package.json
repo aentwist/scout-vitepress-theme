@@ -1,6 +1,18 @@
 {
   "name": "scout-vitepress-theme",
   "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/scout-vitepress-theme.cjs",
+  "module": "./dist/scout-vitepress-theme.js",
+  "exports": {
+    ".": {
+      "import": "./dist/scout-vitepress-theme.js",
+      "require": "./dist/scout-vitepress-theme.umd.cjs"
+    }
+  },
   "scripts": {
     "start": "vite",
     "dev": "npm start",
