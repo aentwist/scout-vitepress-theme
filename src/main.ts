@@ -6,9 +6,9 @@ import vuetify from "./plugins/vuetify";
 import "./assets/main.css";
 
 export default <Theme>{
+  extends: DefaultTheme,
   Layout,
   enhanceApp({ app }) {
     app.use(vuetify);
   },
-  extends: DefaultTheme,
 };
