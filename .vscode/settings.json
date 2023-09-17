@@ -2,7 +2,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "[html][css][javascript][typescript][vue][json][markdown]": {
+  "[html][css][javascript][typescript][vue][json][jsonc][markdown]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
