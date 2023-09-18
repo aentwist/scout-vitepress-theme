@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.capitalize {
+  text-transform: capitalize !important;
+}
+
 html {
   overflow-y: auto;
 }

@@ -9,9 +9,18 @@ import vuetify from "vite-plugin-vuetify";
 export default defineConfig({
   plugins: [vue(), vuetify()],
   resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
+    alias: [
+      {
+        find: "@",
+        replacement: fileURLToPath(new URL("./src", import.meta.url)),
+      },
+      // {
+      //   find: /^.*\/VPContent\.vue$/,
+      //   replacement: fileURLToPath(
+      //     new URL("./src/components/CustomContent.vue", import.meta.url)
+      //   ),
+      // },
+    ],
   },
   build: {
     lib: {

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "type": "module",
   "files": [
-    "dist"
+    "public",
+    "src"
   ],
   "main": "./dist/scout-vitepress-theme.cjs",
   "module": "./dist/scout-vitepress-theme.js",
@@ -14,14 +15,13 @@
     }
   },
   "scripts": {
-    "start": "vite",
-    "build": "run-p type-check build-only",
-    "preview": "vite preview",
-    "test": "vitest",
-    "build-only": "vite build",
+    "start": "vitepress dev demo",
+    "build:demo": "vitepress build demo",
+    "serve": "npm run build:demo && vitepress serve demo",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "test": "vitest"
   },
   "dependencies": {
     "vitepress": "^1.0.0-rc.14",
