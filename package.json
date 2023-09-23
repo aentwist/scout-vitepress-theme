@@ -6,13 +6,9 @@
     "public",
     "src"
   ],
-  "main": "./dist/scout-vitepress-theme.cjs",
-  "module": "./dist/scout-vitepress-theme.js",
+  "main": "src/main.ts",
   "exports": {
-    ".": {
-      "import": "./dist/scout-vitepress-theme.js",
-      "require": "./dist/scout-vitepress-theme.umd.cjs"
-    }
+    ".": "./src/main.ts"
   },
   "scripts": {
     "start": "vitepress dev demo",
